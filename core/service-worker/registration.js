@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production' || server.devServiceWorker) {
     ready () {
       Logger.log(
         'App is being served from cache by a service worker.'
-      )
+      )()
     },
     cached () {
       Logger.log('Content has been cached for offline use.')()
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production' || server.devServiceWorker) {
     offline () {
       Logger.log(
         'No internet connection found. App is running in offline mode.'
-      )
+      )()
     },
     error (error) {
       Logger.error('Error during service worker registration:', error)()
